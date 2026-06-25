@@ -38,9 +38,6 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### Maven ###
-target/
-
 ### Allure ###
 allure-results/
 .allure/
