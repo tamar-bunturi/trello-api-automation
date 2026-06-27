@@ -16,7 +16,6 @@ public class ConfigReader {
     public static String getApiKey(){
         return getRequiredEnv("TRELLO_KEY");
     }
-    public static String getToken(){
-        return getRequiredEnv("TRELLO_TOKEN");
+    public static String getToken(){return getRequiredEnv("TRELLO_TOKEN");
     }
 }
