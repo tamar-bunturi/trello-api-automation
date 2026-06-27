@@ -36,7 +36,7 @@ public class BoardTest {
                 .baseUri("https://api.trello.com")
                 .queryParam("key", ConfigReader.getApiKey())
                 .queryParam("token", ConfigReader.getToken())
-                .queryParam("name", "To Do")
+                .queryParam("name", "To do")
                 .queryParam("idBoard", boardId)
                 .when()
                 .post("/1/lists")
@@ -47,7 +47,7 @@ public class BoardTest {
         Assert.assertNotNull(listId, "List should not be null");
     }
 
-    @Test
+    @Test (dependsOnMethods = "createList")
     public void createCard(){
         cardId = given()
                 .baseUri("https://api.trello.com")
